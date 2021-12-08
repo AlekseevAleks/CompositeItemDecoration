@@ -10,6 +10,4 @@ data class AddressItem(val address: String) : SummaryItem()
 
 data class CheckBoxItem(val title: String, val checked: Boolean) : SummaryItem()
 
-data class PaySystemItem(val title: String) : SummaryItem()
-
 data class ButtonItem(val title: String) : SummaryItem()
