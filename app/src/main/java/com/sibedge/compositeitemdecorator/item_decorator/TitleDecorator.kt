@@ -11,8 +11,12 @@ import com.sibedge.compositeitemdecorator.R
 import com.sibedge.compositeitemdecorator.adapter.TitleItem
 import com.sibedge.compositeitemdecorator.base.adapter.BaseCompositeAdapter
 import com.sibedge.compositeitemdecorator.base.item_decorator.BaseDecorationDelegate
+import com.sibedge.compositeitemdecorator.utils.dpToPx
 
 class TitleDecorator(context: Context) : BaseDecorationDelegate() {
+
+    private val marginHorizontal = 16.dpToPx()
+    private val marginVertical = 12.dpToPx()
 
     private var divider: Drawable =
         requireNotNull(ContextCompat.getDrawable(context, R.drawable.summary_divider))
@@ -32,7 +36,10 @@ class TitleDecorator(context: Context) : BaseDecorationDelegate() {
     }
 
     override fun getItemOffsets(position: Int, outRect: Rect, parent: RecyclerView) {
-        outRect.top = if (position == 0) 0 else divider.intrinsicHeight
+        outRect.top = marginVertical + if (position == 0) 0 else divider.intrinsicHeight
+        outRect.bottom = marginVertical
+        outRect.right = marginHorizontal
+        outRect.left = marginHorizontal
     }
 
     override fun isForItem(position: Int, parent: RecyclerView): Boolean {

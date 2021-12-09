@@ -12,8 +12,10 @@ class CompositeItemDecoration(vararg itemDecorations: ItemDecorationDelegate) :
     private val decorations = itemDecorations.toList()
 
     override fun onDraw(canvas: Canvas, parent: RecyclerView, state: RecyclerView.State) {
+        var i = 0
         parent.children
             .forEach { view ->
+                i++
                 val position = parent.getChildAdapterPosition(view)
                 if (position != RecyclerView.NO_POSITION) {
                     findDecoration(position, parent)?.onDraw(position, view, canvas, parent)

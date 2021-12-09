@@ -1,4 +1,4 @@
-package com.devexperts.dxmarket.client.ui.registration.adapters.summary
+package com.sibedge.compositeitemdecorator.item_decorator
 
 import android.content.Context
 import android.graphics.Canvas
@@ -7,9 +7,12 @@ import android.graphics.drawable.Drawable
 import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.devexperts.dxmarket.client.view.recyclerview.BaseDecorationDelegate
-import com.devexperts.dxmarket.client.view.recyclerview.CompositeAdapterDelegate
-import com.devexperts.dxmobile.isbank.R
+import com.sibedge.compositeitemdecorator.R
+import com.sibedge.compositeitemdecorator.adapter.CheckBoxItem
+import com.sibedge.compositeitemdecorator.adapter.TitleItem
+import com.sibedge.compositeitemdecorator.base.adapter.BaseCompositeAdapter
+import com.sibedge.compositeitemdecorator.base.item_decorator.BaseDecorationDelegate
+import com.sibedge.compositeitemdecorator.utils.dpToPx
 
 class CheckBoxItemDecorator(context: Context) : BaseDecorationDelegate() {
 
@@ -36,8 +39,8 @@ class CheckBoxItemDecorator(context: Context) : BaseDecorationDelegate() {
 
     override fun isForItem(position: Int, parent: RecyclerView): Boolean {
         val adapter = parent.adapter
-        if (adapter is CompositeAdapterDelegate) {
-            return adapter.getItem(position) is CheckBoxInformation
+        if (adapter is BaseCompositeAdapter) {
+            return adapter.getItem(position) is CheckBoxItem
         }
         return false
     }
@@ -66,8 +69,8 @@ class CheckBoxItemDecorator(context: Context) : BaseDecorationDelegate() {
 
     private fun isTitleItem(position: Int, parent: RecyclerView): Boolean {
         val adapter = parent.adapter
-        if (adapter is CompositeAdapterDelegate) {
-            return adapter.getItem(position) is StepTitle
+        if (adapter is BaseCompositeAdapter) {
+            return adapter.getItem(position) is TitleItem
         }
         return false
     }

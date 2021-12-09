@@ -8,6 +8,8 @@ import com.sibedge.compositeitemdecorator.adapter.*
 import com.sibedge.compositeitemdecorator.base.adapter.BaseCompositeAdapter
 import com.sibedge.compositeitemdecorator.base.item_decorator.CompositeItemDecoration
 import com.sibedge.compositeitemdecorator.databinding.ActivityMainBinding
+import com.sibedge.compositeitemdecorator.item_decorator.AddressDecorator
+import com.sibedge.compositeitemdecorator.item_decorator.CheckBoxItemDecorator
 import com.sibedge.compositeitemdecorator.item_decorator.PersonalInfoItemDecorator
 import com.sibedge.compositeitemdecorator.item_decorator.TitleDecorator
 
@@ -35,7 +37,9 @@ class MainActivity : AppCompatActivity() {
         binding.list.addItemDecoration(
             CompositeItemDecoration(
                 TitleDecorator(this),
-                PersonalInfoItemDecorator(this)
+                PersonalInfoItemDecorator(this),
+                AddressDecorator(),
+                CheckBoxItemDecorator(this)
             )
         )
         adapter.swapData(MainViewModel().getItems())

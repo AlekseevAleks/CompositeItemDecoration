@@ -9,6 +9,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.sibedge.compositeitemdecorator.R
 import com.sibedge.compositeitemdecorator.adapter.PersonalInfoItem
+import com.sibedge.compositeitemdecorator.adapter.TitleItem
 import com.sibedge.compositeitemdecorator.base.adapter.BaseCompositeAdapter
 import com.sibedge.compositeitemdecorator.base.item_decorator.BaseDecorationDelegate
 import com.sibedge.compositeitemdecorator.utils.dpToPx
