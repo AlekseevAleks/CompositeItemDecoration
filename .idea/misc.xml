@@ -7,6 +7,10 @@
         <entry key="..\:/Documents/Android_Projects/CompositeItemDecorator/app/src/main/res/drawable/address_background.xml" value="0.346782431052094" />
         <entry key="..\:/Documents/Android_Projects/CompositeItemDecorator/app/src/main/res/drawable/ic_summary_checked.xml" value="0.346782431052094" />
         <entry key="..\:/Documents/Android_Projects/CompositeItemDecorator/app/src/main/res/drawable/ic_summary_unchecked.xml" value="0.346782431052094" />
+        <entry key="..\:/Documents/Android_Projects/CompositeItemDecorator/app/src/main/res/drawable/summary_divider.xml" value="0.346782431052094" />
+        <entry key="..\:/Documents/Android_Projects/CompositeItemDecorator/app/src/main/res/drawable/summary_info_background_bottom.xml" value="0.346782431052094" />
+        <entry key="..\:/Documents/Android_Projects/CompositeItemDecorator/app/src/main/res/drawable/summary_info_background_middle.xml" value="0.346782431052094" />
+        <entry key="..\:/Documents/Android_Projects/CompositeItemDecorator/app/src/main/res/drawable/summary_info_background_top.xml" value="0.346782431052094" />
         <entry key="..\:/Documents/Android_Projects/CompositeItemDecorator/app/src/main/res/layout/activity_main.xml" value="0.15262361251261353" />
         <entry key="..\:/Documents/Android_Projects/CompositeItemDecorator/app/src/main/res/layout/layout_address_item.xml" value="0.16145307769929365" />
         <entry key="..\:/Documents/Android_Projects/CompositeItemDecorator/app/src/main/res/layout/layout_button_item.xml" value="0.16145307769929365" />
